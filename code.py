@@ -1,7 +1,9 @@
 """
 Name: Sai Benerji Naidu
-A Simple python program that finds the details of an employee which are entered in different sheets in an excel file
-and returns a new excel sheet with the details of the employee asked by the en user.
+A Simple python program that finds the details of an employee
+ which are entered in different sheets in an excel file
+and returns a new excel sheet with the details
+of the employee asked by the en user.
 """
 
 import openpyxl
@@ -37,11 +39,11 @@ def minisearch():
 
     for i in range(len(columns)):
         sheet.cell(row=1, column=i+1).value = columns[i]
-    keys = [int(input('Select a PS NO: '))]
-    for i in range(2, len(keys)+2):
-        sheet.cell(row=i, column=1).value = keys[i-2]
+    var_k = [int(input('Select a PS NO: '))]
+    for i in range(2, len(var_k)+2):
+        sheet.cell(row=i, column=1).value = var_k[i-2]
         c_var = 2
-    for j in array_1[keys[i-2]]:
+    for j in array_1[var_k[i-2]]:
         sheet.cell(row=i, column=c_var).value = j
         c_var += 1
     workbook.save("Output.xlsx")
